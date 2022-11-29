@@ -1,0 +1,1 @@
+Anotações sobre esse arquetipo orientado à arquitetura hexagonal 
