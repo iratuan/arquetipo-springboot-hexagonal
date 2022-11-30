@@ -54,23 +54,26 @@ public class CustomerController {
 
     @GetMapping("/{id}")
     public ResponseEntity<CustomerResponse> findById(@PathVariable("id") final Long id){
-        Customer customer = findCustomerByIdInputPort.find(id);
-        if(customer==null){
-            return ResponseEntity.notFound().build();
-        }
-        CustomerResponse customerResponse = customerMapper.toCustomerResponse(customer);
-        return ResponseEntity.ok().body(customerResponse);
+       try {
+           Customer customer = findCustomerByIdInputPort.find(id);
+           CustomerResponse customerResponse = customerMapper.toCustomerResponse(customer);
+           return ResponseEntity.ok().body(customerResponse);
+       }catch (RuntimeException e){
+           return ResponseEntity.notFound().build();
+       }
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<CustomerResponse> update(@PathVariable("id") final Long id, @RequestBody CustomerRequest customerRequest){
-        Customer customerFinded = findCustomerByIdInputPort.find(id);
-        if(customerFinded == null){
+
+        try{
+            findCustomerByIdInputPort.find(id);
+            Customer customer = customerMapper.toCustomer(customerRequest);
+            customer.setId(id);
+            updateCustomerInputPort.update(customer, customerRequest.getZipCode());
+            return ResponseEntity.noContent().build();
+        }catch (RuntimeException e){
             return ResponseEntity.notFound().build();
         }
-        Customer customer = customerMapper.toCustomer(customerRequest);
-        customer.setId(id);
-        updateCustomerInputPort.update(customer, customerRequest.getZipCode());
-        return ResponseEntity.noContent().build();
     }
 }
