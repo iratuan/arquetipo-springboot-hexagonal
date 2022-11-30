@@ -6,12 +6,15 @@ import br.com.iratuan.arquetipohexagonal.adapters.inbounds.controllers.responses
 import br.com.iratuan.arquetipohexagonal.application.core.domain.Customer;
 import br.com.iratuan.arquetipohexagonal.application.ports.inbound.FindCustomerByIdInputPort;
 import br.com.iratuan.arquetipohexagonal.application.ports.inbound.InsertCustomerInputPort;
+import br.com.iratuan.arquetipohexagonal.application.ports.inbound.ListAllCustomersInputPort;
 import br.com.iratuan.arquetipohexagonal.application.ports.inbound.UpdateCustomerInputPort;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/customers")
@@ -27,7 +30,18 @@ public class CustomerController {
     private UpdateCustomerInputPort updateCustomerInputPort;
 
     @Autowired
+    private ListAllCustomersInputPort listAllCustomersInputPort;
+    
+    @Autowired
     private CustomerMapper customerMapper;
+    
+    @GetMapping("/")
+    public ResponseEntity<List<CustomerResponse>> list(){
+        List<Customer> result = listAllCustomersInputPort.list();
+        List<CustomerResponse> customerResponseList = new ArrayList<>();
+        result.forEach(c -> customerResponseList.add(customerMapper.toCustomerResponse(c)));
+        return ResponseEntity.ok().body(customerResponseList);
+    }
 
     @PostMapping
     public ResponseEntity<Void> insert(@RequestBody CustomerRequest customerRequest){
