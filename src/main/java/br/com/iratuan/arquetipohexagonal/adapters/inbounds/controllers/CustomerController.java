@@ -4,10 +4,8 @@ import br.com.iratuan.arquetipohexagonal.adapters.inbounds.controllers.mappers.C
 import br.com.iratuan.arquetipohexagonal.adapters.inbounds.controllers.requests.CustomerRequest;
 import br.com.iratuan.arquetipohexagonal.adapters.inbounds.controllers.responses.CustomerResponse;
 import br.com.iratuan.arquetipohexagonal.application.core.domain.Customer;
-import br.com.iratuan.arquetipohexagonal.application.ports.input.FindCustomerByIdInputPort;
-import br.com.iratuan.arquetipohexagonal.application.ports.input.InsertCustomerInputPort;
-import br.com.iratuan.arquetipohexagonal.application.ports.input.ListAllCustomersInputPort;
-import br.com.iratuan.arquetipohexagonal.application.ports.input.UpdateCustomerInputPort;
+import br.com.iratuan.arquetipohexagonal.application.ports.input.*;
+import br.com.iratuan.arquetipohexagonal.application.ports.output.DeleteCustomerOutputPort;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -30,6 +28,9 @@ public class CustomerController {
 
     @Autowired
     private ListAllCustomersInputPort listAllCustomersInputPort;
+
+    @Autowired
+    private DeleteCustomerInputPort deleteCustomerInputPort;
     
     @Autowired
     private CustomerMapper customerMapper;
@@ -49,7 +50,7 @@ public class CustomerController {
     public ResponseEntity<Void> insert(@RequestBody CustomerRequest customerRequest){
         Customer customer = customerMapper.toCustomer(customerRequest);
         insertCustomerInputPort.insert(customer, customerRequest.getZipCode());
-        return ResponseEntity.ok().build();
+        return ResponseEntity.status(201).build();
     }
 
     @GetMapping("/{id}")
@@ -71,6 +72,17 @@ public class CustomerController {
             Customer customer = customerMapper.toCustomer(customerRequest);
             customer.setId(id);
             updateCustomerInputPort.update(customer, customerRequest.getZipCode());
+            return ResponseEntity.noContent().build();
+        }catch (RuntimeException e){
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> delete(@PathVariable("id") Long id){
+        try{
+            Customer customer = findCustomerByIdInputPort.find(id);
+            deleteCustomerInputPort.delete(customer);
             return ResponseEntity.noContent().build();
         }catch (RuntimeException e){
             return ResponseEntity.notFound().build();
