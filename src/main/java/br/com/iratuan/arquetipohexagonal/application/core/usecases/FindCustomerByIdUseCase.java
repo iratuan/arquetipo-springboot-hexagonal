@@ -1,8 +1,8 @@
 package br.com.iratuan.arquetipohexagonal.application.core.usecases;
 
 import br.com.iratuan.arquetipohexagonal.application.core.domain.Customer;
-import br.com.iratuan.arquetipohexagonal.application.ports.inbound.FindCustomerByIdInputPort;
-import br.com.iratuan.arquetipohexagonal.application.ports.outbounds.FindCustomerByIdOutputPort;
+import br.com.iratuan.arquetipohexagonal.application.ports.input.FindCustomerByIdInputPort;
+import br.com.iratuan.arquetipohexagonal.application.ports.output.FindCustomerByIdOutputPort;
 
 public class FindCustomerByIdUseCase implements FindCustomerByIdInputPort {
 

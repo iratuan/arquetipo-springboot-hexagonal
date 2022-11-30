@@ -2,10 +2,10 @@ package br.com.iratuan.arquetipohexagonal.application.core.usecases;
 
 import br.com.iratuan.arquetipohexagonal.application.core.domain.Address;
 import br.com.iratuan.arquetipohexagonal.application.core.domain.Customer;
-import br.com.iratuan.arquetipohexagonal.application.ports.inbound.FindCustomerByIdInputPort;
-import br.com.iratuan.arquetipohexagonal.application.ports.inbound.UpdateCustomerInputPort;
-import br.com.iratuan.arquetipohexagonal.application.ports.outbounds.FindAddressByZipCodeOutputPort;
-import br.com.iratuan.arquetipohexagonal.application.ports.outbounds.UpdateCustomerOutputPort;
+import br.com.iratuan.arquetipohexagonal.application.ports.input.FindCustomerByIdInputPort;
+import br.com.iratuan.arquetipohexagonal.application.ports.input.UpdateCustomerInputPort;
+import br.com.iratuan.arquetipohexagonal.application.ports.output.FindAddressByZipCodeOutputPort;
+import br.com.iratuan.arquetipohexagonal.application.ports.output.UpdateCustomerOutputPort;
 
 public class UpdateCustomerUseCase implements UpdateCustomerInputPort {
 

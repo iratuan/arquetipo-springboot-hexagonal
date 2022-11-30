@@ -4,7 +4,7 @@ import br.com.iratuan.arquetipohexagonal.adapters.outbound.repositories.Customer
 import br.com.iratuan.arquetipohexagonal.adapters.outbound.repositories.entities.CustomerEntity;
 import br.com.iratuan.arquetipohexagonal.adapters.outbound.repositories.mappers.CustomerEntityMapper;
 import br.com.iratuan.arquetipohexagonal.application.core.domain.Customer;
-import br.com.iratuan.arquetipohexagonal.application.ports.outbounds.UpdateCustomerOutputPort;
+import br.com.iratuan.arquetipohexagonal.application.ports.output.UpdateCustomerOutputPort;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

@@ -4,7 +4,7 @@ import br.com.iratuan.arquetipohexagonal.adapters.outbound.clients.FindAddressBy
 import br.com.iratuan.arquetipohexagonal.adapters.outbound.clients.mapper.AddressResponseMapper;
 import br.com.iratuan.arquetipohexagonal.adapters.outbound.clients.responses.AddressResponse;
 import br.com.iratuan.arquetipohexagonal.application.core.domain.Address;
-import br.com.iratuan.arquetipohexagonal.application.ports.outbounds.FindAddressByZipCodeOutputPort;
+import br.com.iratuan.arquetipohexagonal.application.ports.output.FindAddressByZipCodeOutputPort;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

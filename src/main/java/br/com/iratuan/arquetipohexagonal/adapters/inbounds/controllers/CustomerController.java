@@ -4,15 +4,14 @@ import br.com.iratuan.arquetipohexagonal.adapters.inbounds.controllers.mappers.C
 import br.com.iratuan.arquetipohexagonal.adapters.inbounds.controllers.requests.CustomerRequest;
 import br.com.iratuan.arquetipohexagonal.adapters.inbounds.controllers.responses.CustomerResponse;
 import br.com.iratuan.arquetipohexagonal.application.core.domain.Customer;
-import br.com.iratuan.arquetipohexagonal.application.ports.inbound.FindCustomerByIdInputPort;
-import br.com.iratuan.arquetipohexagonal.application.ports.inbound.InsertCustomerInputPort;
-import br.com.iratuan.arquetipohexagonal.application.ports.inbound.ListAllCustomersInputPort;
-import br.com.iratuan.arquetipohexagonal.application.ports.inbound.UpdateCustomerInputPort;
+import br.com.iratuan.arquetipohexagonal.application.ports.input.FindCustomerByIdInputPort;
+import br.com.iratuan.arquetipohexagonal.application.ports.input.InsertCustomerInputPort;
+import br.com.iratuan.arquetipohexagonal.application.ports.input.ListAllCustomersInputPort;
+import br.com.iratuan.arquetipohexagonal.application.ports.input.UpdateCustomerInputPort;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 

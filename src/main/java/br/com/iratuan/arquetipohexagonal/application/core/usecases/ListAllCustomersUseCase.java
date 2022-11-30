@@ -1,8 +1,8 @@
 package br.com.iratuan.arquetipohexagonal.application.core.usecases;
 
 import br.com.iratuan.arquetipohexagonal.application.core.domain.Customer;
-import br.com.iratuan.arquetipohexagonal.application.ports.inbound.ListAllCustomersInputPort;
-import br.com.iratuan.arquetipohexagonal.application.ports.outbounds.ListAllCustomersOutputPort;
+import br.com.iratuan.arquetipohexagonal.application.ports.input.ListAllCustomersInputPort;
+import br.com.iratuan.arquetipohexagonal.application.ports.output.ListAllCustomersOutputPort;
 
 import java.util.List;
 

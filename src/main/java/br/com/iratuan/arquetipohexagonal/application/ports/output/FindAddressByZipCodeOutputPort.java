@@ -1,4 +1,4 @@
-package br.com.iratuan.arquetipohexagonal.application.ports.outbounds;
+package br.com.iratuan.arquetipohexagonal.application.ports.output;
 
 import br.com.iratuan.arquetipohexagonal.application.core.domain.Address;
 

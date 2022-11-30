@@ -1,4 +1,4 @@
-package br.com.iratuan.arquetipohexagonal.application.ports.inbound;
+package br.com.iratuan.arquetipohexagonal.application.ports.input;
 
 import br.com.iratuan.arquetipohexagonal.application.core.domain.Customer;
 
