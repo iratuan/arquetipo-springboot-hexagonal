@@ -6,16 +6,16 @@ import br.com.iratuan.arquetipohexagonal.application.ports.output.FindCustomerBy
 
 public class FindCustomerByIdUseCase implements FindCustomerByIdInputPort {
 
-    private final FindCustomerByIdOutputPort fIndCustomerByIdOutputPort;
+    private final FindCustomerByIdOutputPort findCustomerByIdOutputPort;
 
 
     public FindCustomerByIdUseCase(FindCustomerByIdOutputPort findCustomerByIdOutputPort) {
-        this.fIndCustomerByIdOutputPort = findCustomerByIdOutputPort;
+        this.findCustomerByIdOutputPort = findCustomerByIdOutputPort;
     }
 
     @Override
     public Customer find(Long id){
-                return fIndCustomerByIdOutputPort.find(id).orElseThrow(
+                return findCustomerByIdOutputPort.find(id).orElseThrow(
                         () -> new RuntimeException("Customer not found"));
     }
 }
