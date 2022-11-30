@@ -1,6 +1,4 @@
-package br.com.iratuan.arquetipohexagonal.adapters.outbound.clients.responses;
-
-import lombok.Data;
+package br.com.iratuan.arquetipohexagonal.adapters.input.controllers.responses;
 
 
 public class AddressResponse {
@@ -44,5 +42,13 @@ public class AddressResponse {
         this.postalCode = postalCode;
     }
 
-
+    @Override
+    public String toString() {
+        return "AddressResponse{" +
+                "street='" + street + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", postalCode='" + postalCode + '\'' +
+                '}';
+    }
 }

@@ -1,6 +1,6 @@
-package br.com.iratuan.arquetipohexagonal.adapters.outbound.clients;
+package br.com.iratuan.arquetipohexagonal.adapters.output.clients;
 
-import br.com.iratuan.arquetipohexagonal.adapters.outbound.clients.responses.AddressResponse;
+import br.com.iratuan.arquetipohexagonal.adapters.output.clients.responses.AddressResponse;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

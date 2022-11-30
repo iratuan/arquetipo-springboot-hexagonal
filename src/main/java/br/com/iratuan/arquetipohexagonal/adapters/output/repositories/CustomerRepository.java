@@ -1,6 +1,6 @@
-package br.com.iratuan.arquetipohexagonal.adapters.outbound.repositories;
+package br.com.iratuan.arquetipohexagonal.adapters.output.repositories;
 
-import br.com.iratuan.arquetipohexagonal.adapters.outbound.repositories.entities.CustomerEntity;
+import br.com.iratuan.arquetipohexagonal.adapters.output.repositories.entities.CustomerEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

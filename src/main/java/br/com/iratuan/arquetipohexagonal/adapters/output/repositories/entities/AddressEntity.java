@@ -1,13 +1,16 @@
-package br.com.iratuan.arquetipohexagonal.adapters.inbounds.controllers.responses;
+package br.com.iratuan.arquetipohexagonal.adapters.output.repositories.entities;
+
+import javax.persistence.*;
 
 
-public class AddressResponse {
+@Embeddable
+public class AddressEntity {
     private String street;
     private String city;
     private String state;
     private String postalCode;
 
-    public AddressResponse() {
+    public AddressEntity() {
     }
 
     public String getStreet() {
@@ -40,15 +43,5 @@ public class AddressResponse {
 
     public void setPostalCode(String postalCode) {
         this.postalCode = postalCode;
-    }
-
-    @Override
-    public String toString() {
-        return "AddressResponse{" +
-                "street='" + street + '\'' +
-                ", city='" + city + '\'' +
-                ", state='" + state + '\'' +
-                ", postalCode='" + postalCode + '\'' +
-                '}';
     }
 }

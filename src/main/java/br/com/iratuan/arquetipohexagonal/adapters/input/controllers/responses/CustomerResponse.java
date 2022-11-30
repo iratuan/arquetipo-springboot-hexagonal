@@ -1,7 +1,4 @@
-package br.com.iratuan.arquetipohexagonal.adapters.inbounds.controllers.responses;
-
-import br.com.iratuan.arquetipohexagonal.application.core.domain.Address;
-import lombok.Data;
+package br.com.iratuan.arquetipohexagonal.adapters.input.controllers.responses;
 
 
 public class CustomerResponse {

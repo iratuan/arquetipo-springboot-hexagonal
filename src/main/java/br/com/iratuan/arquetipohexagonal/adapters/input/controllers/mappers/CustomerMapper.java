@@ -1,11 +1,10 @@
-package br.com.iratuan.arquetipohexagonal.adapters.inbounds.controllers.mappers;
+package br.com.iratuan.arquetipohexagonal.adapters.input.controllers.mappers;
 
-import br.com.iratuan.arquetipohexagonal.adapters.inbounds.controllers.requests.CustomerRequest;
-import br.com.iratuan.arquetipohexagonal.adapters.inbounds.controllers.responses.CustomerResponse;
+import br.com.iratuan.arquetipohexagonal.adapters.input.controllers.requests.CustomerRequest;
+import br.com.iratuan.arquetipohexagonal.adapters.input.controllers.responses.CustomerResponse;
 import br.com.iratuan.arquetipohexagonal.application.core.domain.Customer;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-import org.springframework.stereotype.Component;
 
 @Mapper(componentModel = "spring")
 

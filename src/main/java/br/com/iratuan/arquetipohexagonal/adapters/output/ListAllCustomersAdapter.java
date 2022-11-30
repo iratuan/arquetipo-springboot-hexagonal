@@ -1,8 +1,8 @@
-package br.com.iratuan.arquetipohexagonal.adapters.outbound;
+package br.com.iratuan.arquetipohexagonal.adapters.output;
 
-import br.com.iratuan.arquetipohexagonal.adapters.outbound.repositories.CustomerRepository;
-import br.com.iratuan.arquetipohexagonal.adapters.outbound.repositories.entities.CustomerEntity;
-import br.com.iratuan.arquetipohexagonal.adapters.outbound.repositories.mappers.CustomerEntityMapper;
+import br.com.iratuan.arquetipohexagonal.adapters.output.repositories.CustomerRepository;
+import br.com.iratuan.arquetipohexagonal.adapters.output.repositories.entities.CustomerEntity;
+import br.com.iratuan.arquetipohexagonal.adapters.output.repositories.mappers.CustomerEntityMapper;
 import br.com.iratuan.arquetipohexagonal.application.core.domain.Customer;
 import br.com.iratuan.arquetipohexagonal.application.ports.output.ListAllCustomersOutputPort;
 import org.springframework.beans.factory.annotation.Autowired;

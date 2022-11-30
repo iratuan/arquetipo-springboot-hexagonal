@@ -1,7 +1,4 @@
-package br.com.iratuan.arquetipohexagonal.adapters.inbounds.controllers.requests;
-
-import lombok.*;
-
+package br.com.iratuan.arquetipohexagonal.adapters.input.controllers.requests;
 
 
 public class CustomerRequest {

@@ -1,6 +1,6 @@
-package br.com.iratuan.arquetipohexagonal.adapters.outbound.clients.mapper;
+package br.com.iratuan.arquetipohexagonal.adapters.output.clients.mapper;
 
-import br.com.iratuan.arquetipohexagonal.adapters.outbound.clients.responses.AddressResponse;
+import br.com.iratuan.arquetipohexagonal.adapters.output.clients.responses.AddressResponse;
 import br.com.iratuan.arquetipohexagonal.application.core.domain.Address;
 import org.mapstruct.Mapper;
 

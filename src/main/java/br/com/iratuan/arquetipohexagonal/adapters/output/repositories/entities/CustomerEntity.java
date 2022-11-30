@@ -1,7 +1,5 @@
-package br.com.iratuan.arquetipohexagonal.adapters.outbound.repositories.entities;
+package br.com.iratuan.arquetipohexagonal.adapters.output.repositories.entities;
 
-
-import lombok.Data;
 
 import javax.persistence.*;
 

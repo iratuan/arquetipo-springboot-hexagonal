@@ -1,11 +1,10 @@
-package br.com.iratuan.arquetipohexagonal.adapters.inbounds.controllers;
+package br.com.iratuan.arquetipohexagonal.adapters.input.controllers;
 
-import br.com.iratuan.arquetipohexagonal.adapters.inbounds.controllers.mappers.CustomerMapper;
-import br.com.iratuan.arquetipohexagonal.adapters.inbounds.controllers.requests.CustomerRequest;
-import br.com.iratuan.arquetipohexagonal.adapters.inbounds.controllers.responses.CustomerResponse;
+import br.com.iratuan.arquetipohexagonal.adapters.input.controllers.mappers.CustomerMapper;
+import br.com.iratuan.arquetipohexagonal.adapters.input.controllers.requests.CustomerRequest;
+import br.com.iratuan.arquetipohexagonal.adapters.input.controllers.responses.CustomerResponse;
 import br.com.iratuan.arquetipohexagonal.application.core.domain.Customer;
 import br.com.iratuan.arquetipohexagonal.application.ports.input.*;
-import br.com.iratuan.arquetipohexagonal.application.ports.output.DeleteCustomerOutputPort;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

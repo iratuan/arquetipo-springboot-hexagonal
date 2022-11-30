@@ -1,8 +1,8 @@
-package br.com.iratuan.arquetipohexagonal.adapters.outbound;
+package br.com.iratuan.arquetipohexagonal.adapters.output;
 
-import br.com.iratuan.arquetipohexagonal.adapters.outbound.clients.FindAddressByZipCodeClient;
-import br.com.iratuan.arquetipohexagonal.adapters.outbound.clients.mapper.AddressResponseMapper;
-import br.com.iratuan.arquetipohexagonal.adapters.outbound.clients.responses.AddressResponse;
+import br.com.iratuan.arquetipohexagonal.adapters.output.clients.FindAddressByZipCodeClient;
+import br.com.iratuan.arquetipohexagonal.adapters.output.clients.mapper.AddressResponseMapper;
+import br.com.iratuan.arquetipohexagonal.adapters.output.clients.responses.AddressResponse;
 import br.com.iratuan.arquetipohexagonal.application.core.domain.Address;
 import br.com.iratuan.arquetipohexagonal.application.ports.output.FindAddressByZipCodeOutputPort;
 import org.springframework.beans.factory.annotation.Autowired;

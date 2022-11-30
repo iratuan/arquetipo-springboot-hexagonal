@@ -1,8 +1,7 @@
 package br.com.iratuan.arquetipohexagonal.config.beans;
 
-import br.com.iratuan.arquetipohexagonal.adapters.outbound.FindAddressByZipCodeAdapter;
-import br.com.iratuan.arquetipohexagonal.adapters.outbound.FindCustomerByIdAdapter;
-import br.com.iratuan.arquetipohexagonal.adapters.outbound.UpdateCustomerAdapter;
+import br.com.iratuan.arquetipohexagonal.adapters.output.FindAddressByZipCodeAdapter;
+import br.com.iratuan.arquetipohexagonal.adapters.output.UpdateCustomerAdapter;
 import br.com.iratuan.arquetipohexagonal.application.core.usecases.FindCustomerByIdUseCase;
 import br.com.iratuan.arquetipohexagonal.application.core.usecases.UpdateCustomerUseCase;
 import org.springframework.context.annotation.Bean;

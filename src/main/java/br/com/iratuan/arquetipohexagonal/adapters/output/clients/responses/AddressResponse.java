@@ -1,18 +1,13 @@
-package br.com.iratuan.arquetipohexagonal.adapters.outbound.repositories.entities;
-
-import lombok.Data;
-
-import javax.persistence.*;
+package br.com.iratuan.arquetipohexagonal.adapters.output.clients.responses;
 
 
-@Embeddable
-public class AddressEntity {
+public class AddressResponse {
     private String street;
     private String city;
     private String state;
     private String postalCode;
 
-    public AddressEntity() {
+    public AddressResponse() {
     }
 
     public String getStreet() {
@@ -46,4 +41,6 @@ public class AddressEntity {
     public void setPostalCode(String postalCode) {
         this.postalCode = postalCode;
     }
+
+
 }

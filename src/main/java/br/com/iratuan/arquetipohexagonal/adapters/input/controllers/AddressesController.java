@@ -1,6 +1,6 @@
-package br.com.iratuan.arquetipohexagonal.adapters.inbounds.controllers;
+package br.com.iratuan.arquetipohexagonal.adapters.input.controllers;
 
-import br.com.iratuan.arquetipohexagonal.adapters.inbounds.controllers.responses.AddressResponse;
+import br.com.iratuan.arquetipohexagonal.adapters.input.controllers.responses.AddressResponse;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
